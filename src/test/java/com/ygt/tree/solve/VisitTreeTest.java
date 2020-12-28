@@ -16,7 +16,7 @@ class VisitTreeTest {
      * 中序遍历
      */
     @Test
-    void inorderTraversal() {
+    void testInorderTraversal() {
         NormalTreeNode left = new NormalTreeNode(2, null, null);
         NormalTreeNode right = new NormalTreeNode(4, null, null);
         NormalTreeNode normalTreeNode = new NormalTreeNode(3, left, right);
@@ -42,12 +42,21 @@ class VisitTreeTest {
      * 层序遍历每层一个数组
      */
     @Test
-    void linePrint() {
+    void testLinePrint() {
         //        int[] temp = {1, 2, 3, 4, 5, 6, 7, 8};
         int[] temp = {1, 2, 2, 3, 4, 4, 3};
         NormalTreeNode normalTreeNode = NormalTreeNode.putAll(temp, 0);
         VisitTree visitTree = new VisitTree();
         ArrayList<ArrayList<Integer>> arrayLists = visitTree.linePrint(normalTreeNode);
+        System.out.println(arrayLists);
+    }
+
+    @Test
+    void testZigzagPrint() {
+        int[] temp = {1, 2, 3, 4, 5, 6, 7};
+        NormalTreeNode normalTreeNode = NormalTreeNode.putAll(temp, 0);
+        VisitTree visitTree = new VisitTree();
+        ArrayList<ArrayList<Integer>> arrayLists = visitTree.zigzagPrint(normalTreeNode);
         System.out.println(arrayLists);
     }
 }
