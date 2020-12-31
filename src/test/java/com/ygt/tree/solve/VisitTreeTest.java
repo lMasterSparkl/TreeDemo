@@ -59,4 +59,13 @@ class VisitTreeTest {
         ArrayList<ArrayList<Integer>> arrayLists = visitTree.zigzagPrint(normalTreeNode);
         System.out.println(arrayLists);
     }
+
+    @Test
+    void verifySquenceOfBST() {
+//        int[] temp = {1, 3,2};
+        int[] temp = {4,8,6,12,16,14,10};
+        VisitTree visitTree = new VisitTree();
+        boolean b = visitTree.verifySquenceOfBST(temp);
+        System.out.println(b);
+    }
 }
